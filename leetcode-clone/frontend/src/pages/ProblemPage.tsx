@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { Play, Send, RefreshCw } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const MOCK_EXECUTION_URL = 'http://localhost:3001/execute';
+const MOCK_EXECUTION_URL = import.meta.env.VITE_EXECUTION_API_URL || 'http://localhost:3001/execute';
 
 export default function ProblemPage() {
     const { slug } = useParams();
